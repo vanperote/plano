@@ -1,0 +1,2656 @@
+/* Importação das fontes Campuni */
+@font-face {
+  font-family: "Campuni";
+  src: url("https://fonts.cdnfonts.com/s/39539/CampuniTRIAL-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Campuni";
+  src: url("https://fonts.cdnfonts.com/s/39539/CampuniTRIAL-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Adicionar importação da fonte Lato */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
+/* Reset e estilos gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", "Roboto", "Open Sans", sans-serif;
+}
+
+body {
+  background-color: #fff;
+}
+
+/* Estilos para títulos */
+h1,
+h2,
+h3 {
+  font-family: "Campuni", sans-serif;
+  font-weight: 800; /* ExtraBold */
+}
+
+/* Barra de navegação */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6a3de8;
+  color: white;
+  padding: 0 2rem;
+  height: 60px;
+}
+
+.logo {
+  font-family: "Campuni", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700; /* Bold */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-family: "Figtree", sans-serif;
+  font-weight: 400;
+}
+
+.material-symbols-outlined {
+  font-size: 1.2rem;
+  margin-left: 0.2rem;
+}
+
+/* Hero Section Nova */
+.hero-new {
+  color: white;
+  padding: 2rem 2rem 5rem 2rem;
+  position: relative;
+  overflow: visible;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-content-new {
+  flex: 1;
+  max-width: 50%;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-content-new h1 {
+  font-family: "Campuni", sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.year-highlight {
+  color: #fbbf24;
+}
+
+.hero-content-new p {
+  font-family: "Figtree", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* .hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 2;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+} */
+
+/* Process Steps Nova - Posicionado dentro do hero */
+.process-steps-new {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: transparent;
+  height: 80px;
+  gap: 4px;
+  z-index: 10;
+  width: calc(100% - 4rem);
+  max-width: 1200px;
+}
+
+.step-new {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 60px;
+  background: linear-gradient(to bottom, #4c63d2, #3b4ba8);
+  color: white;
+  padding: 0 1.5rem;
+  justify-content: flex-start;
+  border-radius: 12px 12px 0 0;
+  min-width: 180px;
+  flex: 1;
+  max-width: 200px;
+}
+
+.step-new:hover {
+  background: linear-gradient(to bottom, #5a70d8, #4c63d2);
+  transform: translateY(-2px);
+}
+
+.step-new.active {
+  background: white;
+  color: #1e40af;
+  height: 70px;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 15;
+}
+
+.step-number-new {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-right: 1rem;
+  color: #10b981;
+  line-height: 1;
+  min-width: 35px;
+}
+
+.step-new.active .step-number-new {
+  color: #1e40af;
+}
+
+.step-content-new {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.step-title-new {
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.step-subtitle-new {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.step-new.active .step-title-new,
+.step-new.active .step-subtitle-new {
+  opacity: 1;
+}
+
+.home-icon-new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #4c63d2, #3b4ba8);
+  color: white;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 12px 12px 0 0;
+  margin-right: 4px;
+}
+
+.home-icon-new:hover {
+  background: linear-gradient(to bottom, #5a70d8, #4c63d2);
+  transform: translateY(-2px);
+}
+
+.home-icon-new.active {
+  background: white;
+  color: #1e40af;
+  height: 70px;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 15;
+}
+
+.home-icon-new .material-symbols-outlined {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+/* Layout principal */
+.main-content {
+  display: flex;
+  min-height: calc(100vh - 360px);
+  background-color: #fff;
+  position: relative;
+  margin-top: 0;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 300px;
+  background-color: #f5f5f5;
+  padding: 1.5rem;
+  border-right: 1px solid #e0e0e0;
+}
+
+.sidebar-section {
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-section h3 {
+  font-family: "Campuni", sans-serif;
+  font-size: 1rem;
+  font-weight: 700; /* Bold */
+  color: #333;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar-section ul {
+  list-style: none;
+}
+
+.sidebar-section li.active {
+  background-color: #e6eef8;
+  color: #004EDF;
+  padding: 0.5rem;
+  border-radius: 4px;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.sidebar-section li.active::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-color: #004EDF;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14'/%3E%3Cpath d='m12 5 7 7-7 7'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14'/%3E%3Cpath d='m12 5 7 7-7 7'/%3E%3C/svg%3E");
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+}
+
+/* Remover a seta material-symbols que estava sendo usada anteriormente */
+.sidebar-section li.active .material-symbols-outlined {
+  display: none;
+}
+
+/* Ajustar o espaçamento para itens não ativos */
+.sidebar-section li {
+  padding: 0.5rem;
+  padding-left: 2rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.sidebar-section li:hover {
+  color: #004EDF;
+}
+
+/* Conteúdo principal */
+.content {
+  flex: 1;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.content h2 {
+  font-family: "Campuni", sans-serif;
+  color: #004EDF;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 800; /* ExtraBold */
+}
+
+.search-icon {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  color: #004EDF;
+  cursor: pointer;
+}
+
+/* Paginação - REMOVIDO
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: #f0f4e8;
+  padding: 0.5rem;
+  border-radius: 20px;
+  width: fit-content;
+  margin: 2rem auto;
+}
+
+.pagination button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+}
+
+.dots {
+  display: flex;
+  margin: 0 1rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 0.25rem;
+}
+
+.dot.active {
+  background-color: #004EDF;
+}
+*/
+
+/* Conteúdos das etapas */
+.step-content-container {
+  display: none;
+  width: 100%;
+  position: relative;
+}
+
+.step-content-container.active {
+  display: flex;
+}
+
+.step-content-body {
+  margin-top: 2rem;
+}
+
+.step-info {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.step-info h3 {
+  font-family: "Campuni", sans-serif;
+  font-weight: 700;
+  color: #004EDF;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.step-info p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.step-info ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.step-info li {
+  margin-bottom: 0.5rem;
+}
+
+/* Estilos para os cards de documentos */
+.document-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.document-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  width: calc(33.333% - 0.67rem);
+  min-width: 200px;
+}
+
+.document-card span {
+  color: #004EDF;
+  font-size: 24px;
+  margin-right: 0.5rem;
+}
+
+/* Estilos para os cards de estratégia */
+.strategy-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.strategy-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  width: calc(33.333% - 0.67rem);
+  min-width: 200px;
+}
+
+.strategy-card h4 {
+  font-family: "Campuni", sans-serif;
+  color: #004EDF;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Storytelling Section */
+.storytelling-section {
+  background-color: #fff;
+  padding: 4rem 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.storytelling-title {
+  font-family: "Campuni", sans-serif;
+  font-size: 2.5rem;
+  color: #1e40af;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 800;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.content-column h3 {
+  font-family: "Campuni", sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.content-column h4 {
+  font-family: "Campuni", sans-serif;
+  font-size: 1rem;
+  color: #333;
+  margin: 2rem 0 1rem 0;
+  font-weight: 700;
+}
+
+.content-column p {
+  font-family: "Figtree", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Carrossel */
+.carousel-container {
+  width: 100%;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  background-color: #d1d5db;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+  padding: 1.5rem;
+}
+
+.carousel-content h5 {
+  font-family: "Campuni", sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.carousel-content p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  gap: 1rem;
+}
+
+.carousel-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1e40af;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(30, 64, 175, 0.1);
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #9ca3af;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-dot.active {
+  background-color: #1e40af;
+}
+
+/* Quick Access Grid */
+.quick-access-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.quick-access-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #374151;
+  min-height: 80px;
+}
+
+.quick-access-btn:hover {
+  background-color: #1e40af;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.quick-access-btn .material-symbols-outlined {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.quick-access-btn span:last-child {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Power BI Container */
+.powerbi-container {
+  width: 100%;
+  margin: 2rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.powerbi-container iframe {
+  display: block;
+  border: none;
+  background: white;
+}
+
+.powerbi-info {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.powerbi-info h4 {
+  color: #004EDF;
+  margin-bottom: 1rem;
+  font-family: "Campuni", sans-serif;
+}
+
+.powerbi-info ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.powerbi-info li {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.dashboard-actions .tool-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Loading state para Power BI */
+.powerbi-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.powerbi-loading::before {
+  content: "Carregando dashboard...";
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+/* Layout para conteúdo sem sidebar */
+.content-full-width {
+  width: 100%;
+  padding: 2rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-full-width h2 {
+  font-family: "Campuni", sans-serif;
+  color: #004EDF;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.step-description {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  line-height: 1.5;
+}
+
+.section-title {
+  font-family: "Campuni", sans-serif;
+  color: #004EDF;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Estilos para Ferramentas Leme - Etapa 3 */
+.leme-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.leme-card {
+  background: white;
+  border-radius: 12px;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.leme-card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.leme-card-background .material-symbols-outlined {
+  font-size: 8rem;
+  color: rgba(26, 75, 140, 0.1);
+  transition: color 0.3s ease;
+}
+
+.leme-card h5 {
+  font-family: "Campuni", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #004EDF;
+  margin: 0;
+  line-height: 1.2;
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.leme-card:hover {
+  background: #004EDF;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(26, 75, 140, 0.3);
+}
+
+.leme-card:hover .leme-card-background .material-symbols-outlined {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.leme-card:hover h5 {
+  color: white;
+}
+
+/* Processo de Integração */
+.integration-info {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.integration-info h4 {
+  font-family: "Campuni", sans-serif;
+  color: #004EDF;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+}
+
+.integration-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.integration-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.step-number {
+  background: #004EDF;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.step-description h5 {
+  font-family: "Campuni", sans-serif;
+  color: #004EDF;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.step-description p {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero-new {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem 6rem 1rem;
+  }
+
+  .hero-content-new {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .hero-content-new h1 {
+    font-size: 2.5rem;
+  }
+
+  .process-steps-new {
+    flex-direction: column;
+    height: auto;
+    width: calc(100% - 2rem);
+    gap: 2px;
+    align-items: stretch;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .step-new,
+  .home-icon-new {
+    width: 100%;
+    border-radius: 8px;
+    padding: 1rem;
+    height: 60px;
+    max-width: none;
+    min-width: auto;
+  }
+
+  .step-new.active,
+  .home-icon-new.active {
+    height: 65px;
+    transform: translateY(0);
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .storytelling-title {
+    font-size: 2rem;
+  }
+
+  .quick-access-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .powerbi-container iframe {
+    height: 400px;
+  }
+
+  .dashboard-actions {
+    flex-direction: column;
+  }
+
+  .dashboard-actions .tool-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .quick-access-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-steps-new {
+    width: calc(100% - 1rem);
+  }
+
+  .step-new,
+  .home-icon-new {
+    padding: 0.75rem;
+    height: 55px;
+  }
+
+  .step-new.active,
+  .home-icon-new.active {
+    height: 60px;
+  }
+
+  .powerbi-container iframe {
+    height: 350px;
+  }
+}
+
+/* Conteúdo dinâmico */
+.dynamic-content {
+  display: none;
+}
+
+.dynamic-content.active {
+  display: block;
+}
+
+/* Estilos para cards de cenários */
+.scenario-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.scenario-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+}
+
+.scenario-card.optimistic {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.scenario-card.realistic {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.scenario-card.pessimistic {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.scenario-card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Matriz SWOT */
+.swot-matrix {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.swot-quadrant {
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: white;
+}
+
+.swot-quadrant.strengths {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.swot-quadrant.weaknesses {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.swot-quadrant.opportunities {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.swot-quadrant.threats {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.swot-quadrant h4 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.swot-quadrant ul {
+  list-style: none;
+  padding: 0;
+}
+
+.swot-quadrant li {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.swot-quadrant li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+}
+
+/* Cards de benchmark */
+.benchmark-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.benchmark-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.benchmark-card h4 {
+  color: #004EDF;
+  margin-bottom: 0.5rem;
+}
+
+.benchmark-score {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #10b981;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Grid de setores */
+.sector-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.sector-card {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid #e2e8f0;
+}
+
+.sector-card h4 {
+  color: #004EDF;
+  margin-bottom: 0.5rem;
+}
+
+/* Resultados de pesquisa */
+.research-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.result-item {
+  text-align: center;
+  padding: 1rem;
+}
+
+.result-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #004EDF;
+  margin-bottom: 0.5rem;
+}
+
+/* Botões de ferramentas */
+.tool-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.tool-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tool-btn.primary {
+  background: #004EDF;
+  color: white;
+}
+
+.tool-btn.primary:hover {
+  background: #2563eb;
+}
+
+.tool-btn.secondary {
+  background: #f1f5f9;
+  color: #004EDF;
+  border: 1px solid #e2e8f0;
+}
+
+.tool-btn.secondary:hover {
+  background: #e2e8f0;
+}
+
+/* Responsividade para Etapa 3 */
+@media (max-width: 1024px) {
+  .leme-tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .content-full-width {
+    padding: 2rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .leme-tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .leme-card {
+    height: 160px;
+  }
+
+  .leme-card-background .material-symbols-outlined {
+    font-size: 6rem;
+  }
+
+  .leme-card h5 {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  .content-full-width {
+    padding: 1.5rem 1rem;
+  }
+
+  .content-full-width h2 {
+    font-size: 1.5rem;
+  }
+
+  .step-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .leme-tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .leme-card {
+    height: 140px;
+  }
+
+  .leme-card-background .material-symbols-outlined {
+    font-size: 5rem;
+  }
+
+  .leme-card h5 {
+    font-size: 0.85rem;
+  }
+}
+
+/* Estilos para Etapa 4 - Execução e Monitoramento */
+
+/* Accordion Container */
+.accordion-container {
+  margin-top: 2rem;
+}
+
+.accordion-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  background: white;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #f8fafc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.accordion-header:hover {
+  background: #f1f5f9;
+}
+
+.accordion-item.active .accordion-header {
+  background: #004edf;
+  color: white;
+}
+
+.accordion-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 1rem;
+  color: #004edf;
+  min-width: 20px;
+  text-align: center;
+}
+
+.accordion-item.active .accordion-icon {
+  color: white;
+}
+
+.accordion-year {
+  font-family: "Campuni", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.accordion-item.active .accordion-year {
+  color: white;
+}
+
+.accordion-content {
+  display: none;
+  padding: 2rem;
+  background: #f8fafc;
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+/* Grid de Meses */
+.months-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+
+.month-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.month-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.month-card h4 {
+  font-family: "Campuni", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.download-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.download-link {
+  color: #004edf;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.25rem 0;
+  transition: color 0.3s ease;
+}
+
+.download-link:hover {
+  color: #0039b8;
+  text-decoration: underline;
+}
+
+/* Responsividade para Etapa 4 */
+@media (max-width: 1200px) {
+  .months-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .months-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .months-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .month-card {
+    padding: 1rem;
+  }
+
+  .accordion-content {
+    padding: 1rem;
+  }
+
+  .accordion-header {
+    padding: 0.75rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .months-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .month-card {
+    padding: 0.75rem;
+  }
+
+  .month-card h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .download-link {
+    font-size: 0.8rem;
+  }
+}
+
+/* Estilos para Etapa 5 - Encerramento */
+
+.encerramento-cards-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.encerramento-card-wrapper {
+  background-color: #eef3ee;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 450px; /* Reduzido de 598px para 450px */
+  height: 337px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  border: 2px solid transparent; /* Borda transparente por padrão */
+  transition: all 0.3s ease; /* Adicionar transição suave */
+}
+
+.encerramento-card-wrapper:hover {
+  border: 2px solid #004edf;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 78, 223, 0.15);
+}
+
+.encerramento-card-inner {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.encerramento-card-inner h3 {
+  font-family: "Lato", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #004edf;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.card-subtitle {
+  font-family: "Lato", sans-serif;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.card-items-flow {
+  flex: 1;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 0;
+}
+
+.card-item-flow {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.2rem;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.card-item-flow:not(:last-child) .flow-line {
+  display: block;
+}
+
+.card-item-flow:last-child {
+  margin-bottom: 0;
+}
+
+.card-item-flow:last-child .flow-line {
+  display: none;
+}
+
+.item-circle-flow {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #004edf;
+  border-radius: 50%;
+  background-color: transparent;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  margin-top: 0.2rem;
+}
+
+.item-text-flow {
+  color: #333;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.flow-line {
+  position: absolute;
+  left: 5px; /* Centralizado no círculo */
+  width: 2px;
+  height: 1rem;
+  background-image: repeating-linear-gradient(to bottom, #004edf 0px, #004edf 3px, transparent 3px, transparent 6px);
+  top: calc(100% + 0.2rem); /* Posicionado logo após o círculo do item atual */
+  z-index: 1;
+}
+
+.encerramento-btn-3d {
+  background: linear-gradient(135deg, #4c63d2 0%, #1e40af 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-family: "Lato", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+  width: fit-content;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-top: auto;
+  flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.encerramento-btn-3d:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #5a70d8 0%, #2563eb 100%);
+}
+
+.encerramento-btn-3d:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade para Etapa 5 */
+@media (max-width: 1000px) {
+  /* Ajustado de 1300px para 1000px */
+  .encerramento-cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .encerramento-card-wrapper {
+    width: 100%;
+    max-width: 400px; /* Reduzido de 500px para 400px */
+    height: auto;
+    min-height: 300px;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .encerramento-card-wrapper {
+    max-width: 100%;
+    padding: 0.75rem;
+    min-height: 280px;
+  }
+
+  .encerramento-card-inner {
+    padding: 1rem;
+  }
+
+  .encerramento-card-inner h3 {
+    font-size: 0.95rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .item-text-flow {
+    font-size: 0.75rem;
+  }
+
+  .encerramento-btn-3d {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Estilos para Etapa 6 - Avaliação e Aprendizado */
+
+/* Ícone de seta no menu lateral */
+.sidebar-section li .arrow-icon {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  color: #004EDF;
+}
+
+.sidebar-section li:not(.active) .arrow-icon {
+  display: none;
+}
+
+/* Formulário de Contato */
+.contact-form {
+  max-width: 600px;
+  margin-top: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-family: "Figtree", sans-serif;
+  font-size: 0.95rem;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  background-color: #e8e8e8;
+  box-shadow: 0 0 0 2px rgba(26, 75, 140, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #888;
+  font-weight: 400;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: "Figtree", sans-serif;
+}
+
+.form-submit-btn {
+  background-color: #4c63d2;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  font-family: "Figtree", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 0.5rem;
+}
+
+.form-submit-btn:hover {
+  background-color: #3b4ba8;
+  transform: translateY(-1px);
+}
+
+.form-submit-btn:active {
+  transform: translateY(0);
+}
+
+/* FAQ Container */
+.faq-container {
+  margin-top: 2rem;
+  max-width: 800px;
+}
+
+.faq-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  background: white;
+}
+
+.faq-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #f5f5f5;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.faq-header:hover {
+  background: #f0f0f0;
+}
+
+.faq-item.active .faq-header {
+  background: #e6eef8;
+}
+
+.faq-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 1rem;
+  color: #004EDF;
+  min-width: 20px;
+  text-align: center;
+}
+
+.faq-question {
+  font-family: "Figtree", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  flex: 1;
+}
+
+.faq-content {
+  display: none;
+  padding: 1.5rem;
+  background: white;
+  color: #555;
+  line-height: 1.6;
+}
+
+.faq-item.active .faq-content {
+  display: block;
+}
+
+.faq-content p {
+  margin: 0;
+  font-family: "Figtree", sans-serif;
+  font-size: 0.95rem;
+}
+
+/* Responsividade para Etapa 6 */
+@media (max-width: 768px) {
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .form-submit-btn {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .faq-header {
+    padding: 0.75rem 1rem;
+  }
+
+  .faq-content {
+    padding: 1rem;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-icon {
+    margin-right: 0.75rem;
+  }
+
+  .faq-question {
+    font-size: 0.85rem;
+  }
+
+  .faq-content p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Botão de copiar no FAQ */
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #004EDF;
+  opacity: 0.7;
+}
+
+.copy-btn:hover {
+  background-color: rgba(26, 75, 140, 0.1);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.copy-btn .material-symbols-outlined {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.copy-btn.copied {
+  color: #10b981;
+  opacity: 1;
+}
+
+.copy-btn.copied .material-symbols-outlined {
+  display: none;
+}
+
+.copy-btn.copied::after {
+  content: "Copiado";
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Animação para o estado copiado */
+@keyframes copySuccess {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.copy-btn.copied {
+  animation: copySuccess 0.3s ease;
+}
+
+/* Estilos para Etapa 2 - Cronograma de Elaboração */
+
+/* Ícone de seta no menu lateral da Etapa 2 */
+#step-content-2 .sidebar-section li .arrow-icon {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  color: #004EDF;
+}
+
+#step-content-2 .sidebar-section li:not(.active) .arrow-icon {
+  display: none;
+}
+
+/* Itens em negrito clicáveis */
+.bold-item {
+  font-weight: 700;
+  color: #004EDF;
+  cursor: pointer;
+}
+
+.bold-item:hover {
+  color: #2563eb;
+}
+
+/* Cronograma Styles */
+.cronograma-section {
+  margin-bottom: 3rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  background: white;
+}
+
+.cronograma-title {
+  font-family: "Campuni", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #004EDF;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.cronograma-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.cronograma-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.column-header {
+  font-family: "Campuni", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.column-header.planejamento {
+  background-color: #dfebfc;
+  color: #004EDF;
+}
+
+.column-header.aprovacao {
+  background-color: #eef3ee;
+  color: #059669;
+}
+
+.column-header.relatorios {
+  background-color: #edebf8;
+  color: #7c3aed;
+}
+
+.cronograma-card {
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.cronograma-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cronograma-card.planejamento {
+  background-color: #dfebfc;
+  border-color: #bfdbfe;
+}
+
+.cronograma-card.aprovacao {
+  background-color: #eef3ee;
+  border-color: #bbf7d0;
+}
+
+.cronograma-card.relatorios {
+  background-color: #edebf8;
+  border-color: #ddd6fe;
+}
+
+.cronograma-card.highlighted {
+  border: 2px solid #ef4444;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.1);
+}
+
+.location-pin {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-size: 1.2rem;
+  background: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-description {
+  font-family: "Lato", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #004edf;
+  font-weight: 400;
+  padding: 1rem 1rem 0.75rem 1rem;
+  margin: 0;
+}
+
+.card-dates {
+  border-top: 1px solid #b0b3b2;
+  display: flex;
+  position: relative;
+}
+
+.card-dates::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #b0b3b2;
+  transform: translateX(-50%);
+}
+
+.date-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+}
+
+.date-label {
+  font-family: "Lato", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.date-value {
+  font-family: "Lato", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* Responsividade para Cronograma */
+@media (max-width: 1024px) {
+  .cronograma-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .cronograma-column {
+    gap: 0.75rem;
+  }
+
+  .column-header {
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cronograma-section {
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .cronograma-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-description {
+    font-size: 0.8rem;
+    padding: 0.75rem 0.75rem 0.5rem 0.75rem;
+  }
+
+  .card-dates {
+    flex-direction: column;
+  }
+
+  .card-dates::after {
+    display: none;
+  }
+
+  .date-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #b0b3b2;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .date-item:last-child {
+    border-bottom: none;
+  }
+
+  .date-label {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .cronograma-section {
+    padding: 0.75rem;
+  }
+
+  .column-header {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .card-description {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+  }
+
+  .date-label {
+    font-size: 0.7rem;
+  }
+
+  .date-value {
+    font-size: 0.8rem;
+  }
+
+  .date-item {
+    padding: 0.4rem 0.5rem;
+  }
+}
+
+/* Estilos específicos para as seções */
+
+/* Metas Mobilizadoras */
+.metas-description {
+  font-family: "Figtree", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.metas-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.metas-column {
+  background: #004edf;
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: white;
+}
+
+.metas-column-title {
+  font-family: "Campuni", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.meta-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.meta-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.meta-card:last-child {
+  margin-bottom: 0;
+}
+
+.meta-number {
+  background: white;
+  color: #004edf;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.meta-text {
+  font-family: "Figtree", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: white;
+  flex: 1;
+}
+
+/* Programas Nacionais */
+.program-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.program-card {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.program-card:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.program-card.highlighted {
+  background: #004edf;
+  color: white;
+}
+
+.program-card.highlighted:hover {
+  background: #0039b8;
+}
+
+.program-icon {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.program-icon .material-symbols-outlined {
+  font-size: 3rem;
+  color: #004edf;
+}
+
+.program-card.highlighted .program-icon .material-symbols-outlined {
+  color: white;
+}
+
+.program-title {
+  font-family: "Figtree", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #004edf;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.program-card.highlighted .program-title {
+  color: white;
+}
+
+/* Projetos e Processos Nacionais */
+.project-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-card.highlighted {
+  background: #004edf;
+  color: white;
+}
+
+.project-card.highlighted:hover {
+  background: #0039b8;
+}
+
+.project-icon {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-icon .material-symbols-outlined {
+  font-size: 3rem;
+  color: #004edf;
+}
+
+.project-card.highlighted .project-icon .material-symbols-outlined {
+  color: white;
+}
+
+.project-title {
+  font-family: "Figtree", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #004edf;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.project-card.highlighted .project-title {
+  color: white;
+}
+
+/* Biblioteca de Documentos */
+.document-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.document-card {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.document-card:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.document-icon {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.document-icon .material-symbols-outlined {
+  font-size: 4rem;
+  color: #004edf;
+}
+
+.document-title {
+  font-family: "Figtree", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #004edf;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.version-tag {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: #10b981;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: "Figtree", sans-serif;
+}
+
+/* Equipes por Estado */
+.tabs-container {
+  margin-top: 2rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  background: #e9ecef;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-family: "Figtree", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6c757d;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px 8px 0 0;
+}
+
+.tab-btn.active {
+  background: #004edf;
+  color: white;
+}
+
+.tab-btn:hover:not(.active) {
+  background: #dee2e6;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.brazil-map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.brazil-map {
+  max-width: 100%;
+  height: auto;
+  max-height: 600px;
+}
+
+.team-table-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.team-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Figtree", sans-serif;
+}
+
+.team-table th {
+  background: #f8f9fa;
+  color: #495057;
+  font-weight: 600;
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 2px solid #dee2e6;
+  font-size: 0.9rem;
+}
+
+.team-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  font-size: 0.85rem;
+  color: #495057;
+  vertical-align: top;
+}
+
+.team-table tr:hover {
+  background: #f8f9fa;
+}
+
+.team-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .program-cards-grid,
+  .project-cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .metas-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .program-cards-grid,
+  .project-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .document-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .program-cards-grid,
+  .project-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .document-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-table-container {
+    overflow-x: auto;
+  }
+
+  .team-table {
+    min-width: 800px;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tab-btn {
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .program-cards-grid,
+  .project-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .program-card,
+  .project-card {
+    min-height: 120px;
+    padding: 1rem;
+  }
+
+  .program-icon .material-symbols-outlined,
+  .project-icon .material-symbols-outlined {
+    font-size: 2.5rem;
+  }
+
+  .program-title,
+  .project-title {
+    font-size: 0.8rem;
+  }
+
+  .meta-card {
+    padding: 0.75rem;
+  }
+
+  .meta-number {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+  }
+
+  .meta-text {
+    font-size: 0.85rem;
+  }
+}

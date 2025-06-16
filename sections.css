@@ -1,0 +1,461 @@
+/* Estilos específicos para as seções */
+
+/* Metas Mobilizadoras */
+.metas-description {
+  font-family: "Figtree", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.metas-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.metas-column {
+  background: #004edf;
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: white;
+}
+
+.metas-column-title {
+  font-family: "Campuni", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.meta-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.meta-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.meta-card:last-child {
+  margin-bottom: 0;
+}
+
+.meta-number {
+  background: white;
+  color: #004edf;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.meta-text {
+  font-family: "Figtree", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: white;
+  flex: 1;
+}
+
+/* Programas Nacionais */
+.program-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.program-card {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.program-card:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.program-card.highlighted {
+  background: #004edf;
+  color: white;
+}
+
+.program-card.highlighted:hover {
+  background: #0039b8;
+}
+
+.program-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.program-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.program-title {
+  font-family: "Figtree", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #004edf;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.program-card.highlighted .program-title {
+  color: white;
+}
+
+/* Projetos e Processos Nacionais */
+.project-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-card.highlighted {
+  background: #004edf;
+  color: white;
+}
+
+.project-card.highlighted:hover {
+  background: #0039b8;
+}
+
+.project-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.project-title {
+  font-family: "Figtree", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #004edf;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.project-card.highlighted .project-title {
+  color: white;
+}
+
+/* Biblioteca de Documentos */
+.document-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.document-card {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.document-card:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.document-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.document-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.document-title {
+  font-family: "Figtree", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #004edf;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.version-tag {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: #10b981;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: "Figtree", sans-serif;
+}
+
+/* Equipes por Estado */
+.tabs-container {
+  margin-top: 2rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  background: #e9ecef;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-family: "Figtree", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6c757d;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px 8px 0 0;
+}
+
+.tab-btn.active {
+  background: #004edf;
+  color: white;
+}
+
+.tab-btn:hover:not(.active) {
+  background: #dee2e6;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.brazil-map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.brazil-map {
+  max-width: 100%;
+  height: auto;
+  max-height: 600px;
+}
+
+.team-table-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.team-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Figtree", sans-serif;
+}
+
+.team-table th {
+  background: #f8f9fa;
+  color: #495057;
+  font-weight: 600;
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 2px solid #dee2e6;
+  font-size: 0.9rem;
+}
+
+.team-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  font-size: 0.85rem;
+  color: #495057;
+  vertical-align: top;
+}
+
+.team-table tr:hover {
+  background: #f8f9fa;
+}
+
+.team-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .program-cards-grid,
+  .project-cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .metas-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .program-cards-grid,
+  .project-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .document-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .program-cards-grid,
+  .project-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .document-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-table-container {
+    overflow-x: auto;
+  }
+
+  .team-table {
+    min-width: 800px;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tab-btn {
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .program-cards-grid,
+  .project-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .program-card,
+  .project-card {
+    min-height: 120px;
+    padding: 1rem;
+  }
+
+  .program-icon,
+  .project-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.75rem;
+  }
+
+  .program-title,
+  .project-title {
+    font-size: 0.8rem;
+  }
+
+  .meta-card {
+    padding: 0.75rem;
+  }
+
+  .meta-number {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+  }
+
+  .meta-text {
+    font-size: 0.85rem;
+  }
+}

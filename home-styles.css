@@ -1,0 +1,230 @@
+/* Importação das fontes Campuni */
+@font-face {
+  font-family: "Campuni";
+  src: url("https://fonts.cdnfonts.com/s/39539/CampuniTRIAL-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Campuni";
+  src: url("https://fonts.cdnfonts.com/s/39539/CampuniTRIAL-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Reset e estilos gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Figtree", sans-serif;
+}
+
+body {
+  background-color: #fff;
+}
+
+/* Estilos para títulos */
+h1,
+h2 {
+  font-family: "Campuni", sans-serif;
+  font-weight: 800; /* ExtraBold */
+}
+
+/* Barra de navegação */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6a3de8;
+  color: white;
+  padding: 0 2rem;
+  height: 60px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  font-family: "Campuni", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700; /* Bold */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-family: "Figtree", sans-serif;
+  font-weight: 400;
+}
+
+.material-symbols-outlined {
+  font-size: 1.2rem;
+  margin-left: 0.2rem;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background-image: url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Home-N3ZxH3Nbjh1mMRzn9TYX6l1hqyRJ45.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 176, 155, 0.8) 0%, rgba(106, 61, 232, 0.4) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding-left: 10%;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  display: inline-block;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+/* Call to Action Section */
+.cta-section {
+  padding: 3rem 10%;
+  background-color: white;
+}
+
+.cta-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cta-text h2 {
+  color: #2e3b7c;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.cta-text p {
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #2e3b7c;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #3a4a9c;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .hero p {
+    font-size: 1.3rem;
+  }
+
+  .cta-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-text {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .nav-links li {
+    margin-left: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .cta-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-text p {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content {
+    padding-left: 5%;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .cta-section {
+    padding: 2rem 5%;
+  }
+}
